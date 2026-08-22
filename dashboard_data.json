@@ -1,0 +1,246 @@
+{
+  "step": 257,
+  "generated_at": "2026-08-22T06:14:08.777423",
+  "safety": {
+    "dry_run": true,
+    "buy_execution": false,
+    "sell_execution": false,
+    "orders_submitted": false,
+    "positions_changed": false,
+    "cash_changed": false,
+    "broker_state_touched": false
+  },
+  "portfolio": {
+    "positions": [
+      "BKNG",
+      "DE",
+      "MA",
+      "TGT"
+    ],
+    "position_count": 4,
+    "capacity": 4,
+    "cash": 16.04
+  },
+  "state": {
+    "source": "/content/drive/MyDrive/AI_Paper_Trader/Reports/paper_portfolio_state_20260822_042525.json",
+    "validated": true
+  },
+  "rotation": {
+    "approved": false,
+    "reason": "No current holding passed EXIT GATE.",
+    "possible_exit": null,
+    "replacement": "DASH",
+    "replacement_score": 73.88
+  },
+  "holdings": [
+    {
+      "symbol": "DE",
+      "ai_score": 97.0,
+      "win_rate": 63.79,
+      "expected_return": 1.237,
+      "rsi": 63.7222487073523,
+      "relative_volume": 1.7734410514678909,
+      "consistent_score": 75.87943012807467,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "exit_confirmations": 0,
+      "exit_gate": false
+    },
+    {
+      "symbol": "TGT",
+      "ai_score": 88.0,
+      "win_rate": 72.41,
+      "expected_return": 2.012,
+      "rsi": 76.72351762714304,
+      "relative_volume": 1.2006418498950966,
+      "consistent_score": 75.70806101218979,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "exit_confirmations": 0,
+      "exit_gate": false
+    },
+    {
+      "symbol": "MA",
+      "ai_score": 90.0,
+      "win_rate": 62.07,
+      "expected_return": 1.331,
+      "rsi": 58.1836928015355,
+      "relative_volume": 0.7151623683099491,
+      "consistent_score": 67.7391811217033,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "exit_confirmations": 0,
+      "exit_gate": false
+    },
+    {
+      "symbol": "BKNG",
+      "ai_score": 74.0,
+      "win_rate": 56.9,
+      "expected_return": 2.143,
+      "rsi": 68.72645069147816,
+      "relative_volume": 0.6350947568318475,
+      "consistent_score": 64.33061885330704,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "exit_confirmations": 0,
+      "exit_gate": false
+    }
+  ],
+  "qualified_replacements": [
+    {
+      "symbol": "DASH",
+      "ai_score": 80.0,
+      "win_rate": 72.41,
+      "expected_return": 3.025,
+      "rsi": 75.89547849658817,
+      "relative_volume": 0.8249967663458055,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 73.87953168138785
+    },
+    {
+      "symbol": "TMO",
+      "ai_score": 85.0,
+      "win_rate": 70.69,
+      "expected_return": 2.413,
+      "rsi": 74.4901471380916,
+      "relative_volume": 0.8209006525650488,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 73.25851797663441
+    },
+    {
+      "symbol": "DHR",
+      "ai_score": 85.0,
+      "win_rate": 68.97,
+      "expected_return": 1.628,
+      "rsi": 72.84399859199908,
+      "relative_volume": 0.9364242734765398,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 71.27902122658261
+    },
+    {
+      "symbol": "COP",
+      "ai_score": 88.0,
+      "win_rate": 56.9,
+      "expected_return": 1.228,
+      "rsi": 77.27362038641716,
+      "relative_volume": 1.2276325270621018,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 70.06052467395223
+    },
+    {
+      "symbol": "VRTX",
+      "ai_score": 85.0,
+      "win_rate": 65.52,
+      "expected_return": 1.81,
+      "rsi": 75.720080316475,
+      "relative_volume": 0.702839457172648,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 69.99120531751075
+    },
+    {
+      "symbol": "ADSK",
+      "ai_score": 90.0,
+      "win_rate": 55.17,
+      "expected_return": 0.622,
+      "rsi": 64.61056076972528,
+      "relative_volume": 0.9156408511711054,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 65.88676033282805
+    },
+    {
+      "symbol": "CVX",
+      "ai_score": 82.0,
+      "win_rate": 58.62,
+      "expected_return": 1.025,
+      "rsi": 70.48004618020909,
+      "relative_volume": 0.6887508536026019,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 64.80925888603392
+    },
+    {
+      "symbol": "CMCSA",
+      "ai_score": 80.0,
+      "win_rate": 60.34,
+      "expected_return": 0.619,
+      "rsi": 73.41512694196437,
+      "relative_volume": 0.7658460387030857,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 64.30324288771186
+    },
+    {
+      "symbol": "VZ",
+      "ai_score": 82.0,
+      "win_rate": 62.07,
+      "expected_return": 0.367,
+      "rsi": 68.36553475091529,
+      "relative_volume": 0.5080305714810234,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 62.91170633249664
+    },
+    {
+      "symbol": "DIS",
+      "ai_score": 77.0,
+      "win_rate": 60.34,
+      "expected_return": 0.338,
+      "rsi": 73.60431012258593,
+      "relative_volume": 0.46895534288518653,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "consistent_score": 61.23520772668453
+    }
+  ],
+  "rotation_watch": [
+    {
+      "current_holding": "MA",
+      "current_score": 67.739,
+      "replacement": "DASH",
+      "replacement_score": 73.88,
+      "score_advantage": 6.14,
+      "exit_confirmations": 0,
+      "exit_gate": false,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "status": "WATCH ONLY \u2014 EXIT GATE BLOCKED"
+    },
+    {
+      "current_holding": "BKNG",
+      "current_score": 64.331,
+      "replacement": "DASH",
+      "replacement_score": 73.88,
+      "score_advantage": 9.549,
+      "exit_confirmations": 0,
+      "exit_gate": false,
+      "entry_confirmations": 3,
+      "entry_gate": true,
+      "status": "WATCH ONLY \u2014 EXIT GATE BLOCKED"
+    }
+  ],
+  "scanner": {
+    "dataframe": "v3_candidates",
+    "candidate_count": 20,
+    "column_mapping": {
+      "symbol": "symbol",
+      "ai_score": "trade_score",
+      "win_rate": "win_rate",
+      "expected_return": "avg_5d_return",
+      "rsi": "rsi",
+      "relative_volume": "relative_volume"
+    }
+  },
+  "_dashboard_meta": {
+    "step": 258,
+    "updated_at": "2026-08-22T06:15:43.038876",
+    "dry_run": true,
+    "auto_refresh_enabled": true,
+    "broker_actions_enabled": false
+  }
+}
