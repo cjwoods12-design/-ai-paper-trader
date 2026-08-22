@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1,
+               maximum-scale=1,
+               viewport-fit=cover">
+<meta name="theme-color"
+      content="#0b0f19">
+<meta name="apple-mobile-web-app-capable"
+      content="yes">
+<meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
+<meta name="apple-mobile-web-app-title"
+      content="AI Paper Trader">
+<link rel="manifest"
+      href="manifest.json">
+<title>AI Paper Trader</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f19;
+    color: #ffffff;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        Arial,
+        sans-serif;
+}
+body {
+    padding:
+        env(safe-area-inset-top)
+        14px
+        env(safe-area-inset-bottom)
+        14px;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+.header {
+    padding: 18px 4px 12px;
+}
+.title {
+    font-size: 28px;
+    font-weight: 800;
+}
+.subtitle {
+    color: #8d96a8;
+    margin-top: 4px;
+    font-size: 14px;
+}
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #35d07f;
+}
+.section {
+    margin-top: 20px;
+}
+.section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #aeb6c5;
+    margin-bottom: 9px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.card {
+    background: #141a27;
+    border: 1px solid #222b3d;
+    border-radius: 17px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.holding {
+    min-height: 85px;
+}
+.symbol {
+    font-size: 21px;
+    font-weight: 800;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.score {
+    font-size: 22px;
+    font-weight: 800;
+}
+.metrics {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+.metrics div {
+    background: #0e1420;
+    border-radius: 11px;
+    padding: 9px;
+}
+.metrics span {
+    display: block;
+    font-size: 11px;
+    color: #7e889a;
+}
+.metrics strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+}
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.green {
+    background: rgba(53,208,127,.13);
+    color: #35d07f;
+}
+.blue {
+    background: rgba(75,145,255,.13);
+    color: #6ea8ff;
+}
+.red {
+    background: rgba(255,85,85,.13);
+    color: #ff7070;
+}
+.stat {
+    background: #141a27;
+    border: 1px solid #222b3d;
+    border-radius: 17px;
+    padding: 16px;
+}
+.stat-label {
+    color: #7e889a;
+    font-size: 12px;
+}
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 4px;
+}
+.notice {
+    border-radius: 17px;
+    padding: 17px;
+    background: #141a27;
+    border: 1px solid #222b3d;
+}
+.muted {
+    color: #8d96a8;
+}
+.footer {
+    text-align: center;
+    color: #626c7d;
+    font-size: 11px;
+    padding: 25px 0;
+}
+@media (max-width: 390px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="title">
+            AI Paper Trader
+        </div>
+        <div class="subtitle">
+            Mobile Dashboard
+        </div>
+        <div class="status">
+            <div class="dot"></div>
+            <span>
+                PAPER MODE · DRY RUN
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <div class="grid">
+            <div class="stat">
+                <div class="stat-label">
+                    POSITIONS
+                </div>
+                <div class="stat-value">
+                    4 / 4
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">
+                    CASH
+                </div>
+                <div class="stat-value">
+                    $16.04
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            CURRENT HOLDINGS
+        </div>
+        <div class="grid">
+            
+    <div class="card holding">
+        <div class="symbol">BKNG</div>
+        <div class="badge green">HELD</div>
+    </div>
+    
+    <div class="card holding">
+        <div class="symbol">DE</div>
+        <div class="badge green">HELD</div>
+    </div>
+    
+    <div class="card holding">
+        <div class="symbol">MA</div>
+        <div class="badge green">HELD</div>
+    </div>
+    
+    <div class="card holding">
+        <div class="symbol">TGT</div>
+        <div class="badge green">HELD</div>
+    </div>
+    
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            ROTATION STATUS
+        </div>
+        <div class="notice">
+            <div class="badge green">
+                NO ROTATION
+            </div>
+            <p class="muted">
+                No simulated trades are permitted unless
+                the independent exit and entry gates both pass.
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            QUALIFIED WATCHLIST
+        </div>
+        
+    <div class="card">
+        <div class="row">
+            <div class="symbol">DASH</div>
+            <div class="score">73.880</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>72.410%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>3.025%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>75.895</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">TMO</div>
+            <div class="score">73.259</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>70.690%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>2.413%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>74.490</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">DHR</div>
+            <div class="score">71.279</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>68.970%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>1.628%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>72.844</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">COP</div>
+            <div class="score">70.061</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>56.900%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>1.228%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>77.274</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">VRTX</div>
+            <div class="score">69.991</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>65.520%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>1.810%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>75.720</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">ADSK</div>
+            <div class="score">65.887</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>55.170%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>0.622%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>64.611</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">CVX</div>
+            <div class="score">64.809</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>58.620%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>1.025%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>70.480</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">CMCSA</div>
+            <div class="score">64.303</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>60.340%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>0.619%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>73.415</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">VZ</div>
+            <div class="score">62.912</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>62.070%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>0.367%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>68.366</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="row">
+            <div class="symbol">DIS</div>
+            <div class="score">61.235</div>
+        </div>
+        <div class="metrics">
+            <div>
+                <span>Win Rate</span>
+                <strong>60.340%</strong>
+            </div>
+            <div>
+                <span>Expected</span>
+                <strong>0.338%</strong>
+            </div>
+            <div>
+                <span>RSI</span>
+                <strong>73.604</strong>
+            </div>
+        </div>
+        <div class="badge blue">
+            WATCH
+        </div>
+    </div>
+    
+    </div>
+    <div class="footer">
+        Step 253 · Updated 20260822_052726<br>
+        Paper trading only · No broker orders
+    </div>
+</div>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register(
+            "service-worker.js"
+        ).catch(function(error) {
+            console.log(
+                "Service worker registration failed:",
+                error
+            );
+        });
+    });
+}
+</script>
+</body>
+</html>
